@@ -22,8 +22,8 @@ class StockController extends Controller
         $data_borrow = array(
             'stockid' => $request->input('stockid'),
             'borrow' => $request->input('borrow'),
-            'student_id' => '1',
-            'item_id' => '1'
+            'student_id' => $request->input('student_id'),
+            'item_id' => $request->input('item_id')
         );
 
         return Stock::create($data_borrow);
